@@ -1,0 +1,17 @@
+.category-link-active{
+  color: var(--popular-color);
+}
+
+.category-link-not-active{
+  color: var(--text-color);
+}
+
+.categories-container a{
+  font-size: 36px;
+  font-weight: bold;
+  text-decoration: none;
+
+  span{
+    margin-left: 8px;
+  }
+}

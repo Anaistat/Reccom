@@ -1,0 +1,22 @@
+.profile-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-color);
+  color: var(--text-color);
+
+  svg{
+    margin: 20px;
+  }
+
+  .user-info{
+    box-shadow: 0px 0px 10px 5px var(--shadow-color);
+    border-radius: 10px;
+    width: 80%;
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,141 @@
+.header-container {
+  height: 80px;
+  box-shadow: 0px 5px 10px 0px var(--shadow-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: var(--background-color);
+  color: var(--text-color);
+
+.logo-icons{
+  fill: var(--icon-color);
+}
+
+  .logo-name{
+    filter: var(--logo);
+  }
+
+  .search {
+    display: flex;
+
+    .search-field {
+      width: 600px;
+      height: 30px;
+      border: .8px solid #000000;
+      border-radius: 10px;
+      padding-left: 10px;
+    }
+
+    .search-btn {
+      position: relative;
+      border: none;
+      background: transparent;
+      margin-left: -40px;
+    }
+
+    .theme-switcher {
+      border: none;
+      background: none;
+      margin-left: 50px;
+    }
+
+    .language-switcher {
+      border: none;
+      border-radius: 10px;
+      background: none;
+      margin-left: 20px;
+      width: 55px;
+      color: var(--text-color);
+    }
+  }
+}
+
+
+
+.user-header {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: var(--popular-color);
+    }
+
+    &:active {
+      color: #5757f8;
+    }
+  }
+
+  &__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px rgba(18, 18, 18, 0.25);
+    margin-right: 10px;
+  }
+
+  &__nickname {
+    font-weight: bold;
+    margin-right: 20px;
+  }
+
+  &__admin-panel {
+    text-decoration: none;
+    color: #b62929;
+    font-weight: bold;
+    width: 60px;
+
+    &:hover {
+      color: #ee3939;
+    }
+
+    &:active {
+      color: #f87878;
+    }
+  }
+
+  &__login {
+    box-shadow: 0 0 1px 1px rgba(18, 18, 18, 0.25);
+    border-radius: 10px;
+    border: none;
+    background: none;
+    margin-left: 5px;
+    width: 200px;
+    padding: 5px 10px;
+
+
+  }
+
+  &__logout{
+    width: 100px;
+    background: none;
+    border: none;
+    text-decoration: underline;
+  }
+
+  &__logout, &__login{
+
+    color: var(--text-color);
+
+    &:hover {
+      border-color: #2929b6;
+      color: var(--popular-color);
+    }
+
+    &:active {
+      border-color: #6363ec;
+      color: #6363ec;
+    }
+  }
+
+  &__icon{
+    margin-right: 5px;
+  }
+
+}

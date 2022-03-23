@@ -1,0 +1,32 @@
+.main-bg{
+  background-color: var(--background-color);
+}
+
+.main-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 0 0;
+
+  .categories{
+    width: 200px;
+  }
+
+  .add-review{
+    width: 200px;
+  }
+
+      .add-review-button{
+        font-size: 18px;
+        box-shadow: 0px 0px 5px 2px var(--shadow-color);
+        color: var(--text-color);
+        border: none;
+        border-radius: 10px;
+        background: transparent;
+        width: 160px;
+        height: 40px;
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+      }
+
+}

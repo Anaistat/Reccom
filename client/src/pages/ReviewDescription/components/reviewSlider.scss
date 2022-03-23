@@ -1,0 +1,11 @@
+h2{
+  text-align: center;
+}
+
+.carousel-item{
+  height: 600px;
+
+  .d-block w-100{
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,38 @@
+.star-filled{
+    fill: #FFD700;
+}
+
+.star-unfilled{
+    fill: #FFFFFF;
+    fill-opacity: .25;
+    stroke: #FFD700;
+    stroke-width: 1px;
+}
+
+svg:nth-child(even){
+    margin: 0 5px;
+}
+
+*{
+    transition: color 0.15s ease-out, background-color 0.15s ease-out;
+}
+
+html[data-theme = 'dark']{
+    --text-color: #ffffff;
+    --background-color: #121212;
+    --shadow-color: rgba(156, 156, 156, 0.2);
+    --hover-shadow: rgb(79, 101, 160);
+    --popular-color: #90b2ff;
+    --icon-color: #ffffff;
+    --logo: invert(1);
+}
+
+html[data-theme = 'light']{
+    --text-color: #121212;
+    --background-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --hover-shadow: rgb(152, 165, 199);
+    --popular-color: #2929b6;
+    --icon-color: #121212;
+    --logo: invert(0);
+}

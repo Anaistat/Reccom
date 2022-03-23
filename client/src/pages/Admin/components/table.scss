@@ -1,0 +1,16 @@
+.control-table-container{
+  margin: auto;
+  width: 90%;
+  color: var(--text-color);
+
+    .table-title, .table-body{
+      display: grid;
+      grid-template-columns: 2fr 3fr 1fr 1fr 1fr 2fr 2fr;
+    }
+
+  .cell{
+    border: .8px solid var(--text-color);
+    padding: 10px;
+  }
+
+}
