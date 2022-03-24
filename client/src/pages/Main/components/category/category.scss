@@ -1,17 +1,26 @@
 .category-link-active{
   color: var(--popular-color);
+
+  svg{
+    fill: var(--popular-color);
+  }
 }
 
 .category-link-not-active{
   color: var(--text-color);
+
+  svg{
+    fill: var(--icon-color);
+  }
 }
 
-.categories-container a{
+.category-link-active, .category-link-not-active{
+  cursor: pointer;
   font-size: 36px;
   font-weight: bold;
-  text-decoration: none;
 
   span{
     margin-left: 8px;
   }
 }
+

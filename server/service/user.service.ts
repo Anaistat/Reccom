@@ -1,4 +1,4 @@
-import db from "../db";
+import db from "../../db";
 import {Candidate, User, DBUser, DBUserStatus, DBRole} from "../../client/src/types";
 import ApiErrors from "../exceptions/api.errors";
 import DatabaseError from "../exceptions/database.errors.";
@@ -89,6 +89,11 @@ export default class UserService{
             return undefined
         }
         return this.serializeUser(result.rows[0])
+    }
+
+
+    static async updateLoginDate(user_id: number): Promise<void> {
+        await db.query(`UPDATE users SET last_login_date = to_timestamp(${Date.now()} / 1000.0) WHERE id = ${user_id}`)
     }
 
     static async likeReview(user_id: number, review_id: number) {

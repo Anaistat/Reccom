@@ -1,7 +1,6 @@
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
 import "./reviewSlider.scss"
 import {Review} from "../../../types";
-import Stars from "../../../components/stars/stars";
 import Carousel from 'react-bootstrap/Carousel'
 
 
@@ -22,7 +21,7 @@ const ReviewSlider:FC<SliderProps> = ({name, score, images}) => {
                    return <Carousel.Item className="carousel-item" key={'slider-' + i}>
                         <img
                             className="d-block w-100"
-                            src={`http://localhost:8080/images/${e}`}
+                            src={e}
                             alt="First slide"
                         />
                     </Carousel.Item>

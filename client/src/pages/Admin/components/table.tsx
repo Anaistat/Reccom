@@ -1,4 +1,4 @@
-import React, {FC, useContext, useEffect, useState} from 'react';
+import React, {FC, useContext, useEffect} from 'react';
 import "./table.scss"
 import TableHead from "./tableHead"
 import TableBody from "./tableBody"
@@ -23,7 +23,6 @@ const Table:FC = () => {
                 console.warn(err)
             })
         }
-        console.log(users)
     }, [user])
 
 

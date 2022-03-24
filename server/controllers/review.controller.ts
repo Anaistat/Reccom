@@ -39,7 +39,7 @@ class ReviewController{
             const data = JSON.parse(request.body.body)
             let images = []
             if (request.files && Array.isArray(request.files)){
-                images = request.files.map(file=>file.filename)
+                images = request.files.map(file=>file.path)
             }
             await ReviewService.updateReview({ ...data, images: images })
             response.status(200).json({ message: 'Success' })
@@ -98,7 +98,8 @@ class ReviewController{
            const data = JSON.parse(request.body.body)
            let images = []
            if (request.files && Array.isArray(request.files)){
-               images = request.files.map(file=>file.filename)
+               images = request.files.map(file=> file.path)
+
            }
            await ReviewService.newReview({ ...data, images: images })
            response.status(200).json({ message: 'Success' })

@@ -9,7 +9,7 @@ export default async (request: Request, response: Response, next: NextFunction) 
 		return next(ApiErrors.UnauthorizedError())
 	}
 	const user: User | undefined = await UserService.getByUid(uid)
-	if (!user) {
+	if (!user || user.status === 'Block') {
 		return next(ApiErrors.UnauthorizedError())
 	}
 	next()

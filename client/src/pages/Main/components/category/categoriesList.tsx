@@ -1,15 +1,16 @@
 import React, {FC, useContext} from 'react';
 import Category from "./category";
-import {useParams} from "react-router-dom";
 import appLanguage from "../../../../language";
 import AppContext from "../../../../context/app.context";
 import "./categoriesList.scss"
 
-const CategoriesList:FC = () => {
+type CategoriesListProps = {
+    category: string
+    changeCategory: (newCategory: string) => void
+}
 
-    const {category} = useParams()
+const CategoriesList:FC<CategoriesListProps> = ({category, changeCategory}) => {
     const {language} = useContext(AppContext)
-
     return (
         <nav className="categories-container">
             <Category icon={<svg width="29" height="38" viewBox="0 0 29 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +18,9 @@ const CategoriesList:FC = () => {
                             </svg>}
                       name={appLanguage[language].popular}
                       isActive={category === "popular"}
-                      href={"/popular"}
+                      onClick={() => {
+                          changeCategory('popular')
+                      }}
             />
 
             <Category icon={<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +28,9 @@ const CategoriesList:FC = () => {
             </svg>}
                       name={appLanguage[language].recent}
                       isActive={category === "recent"}
-                      href={"/recent"}
+                      onClick={() => {
+                          changeCategory('recent')
+                      }}
             />
         </nav>
     );

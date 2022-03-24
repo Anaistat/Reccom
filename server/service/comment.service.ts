@@ -1,4 +1,4 @@
-import db from '../db'
+import db from '../../db'
 import {Comment, DBComment } from "../../client/src/types";
 import UserService from "./user.service";
 import DatabaseError from "../exceptions/database.errors.";

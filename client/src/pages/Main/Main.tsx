@@ -1,4 +1,4 @@
-import React, {FC, useContext} from 'react';
+import React, {FC, useContext, useState} from 'react';
 import "./main.scss"
 import Tags from "./components/tags";
 import CategoriesList from "./components/category/categoriesList";
@@ -8,7 +8,7 @@ import appLanguage from "../../language";
 import AppContext from "../../context/app.context";
 
 const Main:FC = () => {
-
+    const [category, setCategory] = useState<string>('popular')
     const {language, user} = useContext(AppContext)
 
     return (
@@ -16,9 +16,9 @@ const Main:FC = () => {
             <Tags/>
             <div className="main-container">
                 <div className="categories">
-                    <CategoriesList/>
+                    <CategoriesList category={category} changeCategory={(category: string) => setCategory(category)}/>
                 </div>
-                <ReviewList/>
+                <ReviewList category={category}/>
                 <div className="add-review">
                     {
                         user &&

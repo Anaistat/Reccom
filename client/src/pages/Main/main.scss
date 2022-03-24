@@ -19,6 +19,7 @@
         font-size: 18px;
         box-shadow: 0px 0px 5px 2px var(--shadow-color);
         color: var(--text-color);
+        text-align: center;
         border: none;
         border-radius: 10px;
         background: transparent;
@@ -27,6 +28,12 @@
         position: fixed;
         bottom: 10px;
         right: 20px;
+        transition: box-shadow 0.15s ease-out;
       }
+
+  .add-review-button:hover{
+    box-shadow: 0px 0px 5px 2px var(--hover-shadow);
+    transition: box-shadow 0.15s ease-out;
+  }
 
 }

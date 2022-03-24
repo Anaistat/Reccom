@@ -1,4 +1,4 @@
-import React, {FC, useContext, useEffect} from 'react';
+import React, {FC, useContext} from 'react';
 import "./reviewsPanel.scss"
 import {Button} from "react-bootstrap";
 import Stars from "../../../components/stars/stars";

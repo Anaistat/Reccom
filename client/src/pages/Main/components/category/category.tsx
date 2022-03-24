@@ -5,17 +5,17 @@ import "./category.scss"
 type CategoryProps = {
     icon: any,
     name: string,
-    isActive: boolean
-    href: string
+    isActive: boolean,
+    onClick: () => void
 }
 
-const Category:FC<CategoryProps> = ({icon, name, isActive, href}) => {
+const Category:FC<CategoryProps> = ({icon, name, isActive, onClick}) => {
     return (
         <div>
-            <Link to={href} className={isActive?"category-link-active":"category-link-not-active"}>
+            <h3 className={isActive?"category-link-active":"category-link-not-active"} onClick={onClick}>
                 {icon}
                 <span>{name}</span>
-            </Link>
+            </h3>
         </div>
     );
 };

@@ -1,0 +1,40 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "server": "nodemon index.ts",
+    "client": "cd client && npm run start",
+    "install-client": "npm install --prefix client",
+    "build-client": "cd client && npm run build",
+    "build-server": "tsc",
+    "heroku-postbuild": "npm run install-client && npm run build-client && npm run build-server",
+    "dev": "concurrently -n 'server, client', -c 'red, green' \"npm run server\" \"npm run client\"",
+    "start": "node build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^1.29.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-validator": "^6.14.0",
+    "multer": "^1.4.4",
+    "multer-storage-cloudinary": "^4.0.0",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^17.0.21",
+    "@types/pg": "^8.6.4",
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}

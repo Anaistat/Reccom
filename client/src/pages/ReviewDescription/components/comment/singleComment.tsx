@@ -1,6 +1,5 @@
-import React, {FC, useContext} from 'react';
+import React, {FC} from 'react';
 import "./singleComment.scss"
-import AppContext from "../../../../context/app.context";
 import {Comment} from "../../../../types";
 
 type CommentProps = {

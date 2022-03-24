@@ -3,10 +3,9 @@ import "../NewReview/newReview.scss"
 import "../../App.css"
 import {Button} from "react-bootstrap";
 import Star from "../../components/stars/Star";
-import ProductChose from "../NewReview/components/productChose"
 import MDEditor from '@uiw/react-md-editor';
 import EditReviewContext from "../../context/editReview.context";
-import {Product, Review} from "../../types";
+import {Product} from "../../types";
 import AppContext from "../../context/app.context";
 import appLanguage from '../../language';
 import {useNavigate, useParams} from "react-router-dom";
@@ -47,7 +46,7 @@ const EditReview:FC = () => {
                 date
             })
         }
-        navigate('/popular')
+        navigate('/')
     }
 
     const addTags = () => {

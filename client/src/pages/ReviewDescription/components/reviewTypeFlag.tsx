@@ -1,6 +1,6 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC} from 'react';
 import "./reviewTypeFlag.scss"
-import {Category, Review} from "../../../types";
+import {Category} from "../../../types";
 import {Flag} from "../../../utility";
 
 type ReviewFlagProps = {

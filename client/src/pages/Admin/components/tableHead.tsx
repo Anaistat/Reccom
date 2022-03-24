@@ -1,17 +1,14 @@
-import React, {useContext, useState, useEffect, FC, useLayoutEffect} from 'react';
+import React, {useContext, useState, useEffect, FC} from 'react';
 import "./table.scss"
 import {Button} from "react-bootstrap";
 import UsersContext from "../../../context/users.context";
 import AppContext from "../../../context/app.context";
 import appLanguage from "../../../language";
-import useTheme from "../../../hooks/useTheme";
 
 const TableHead:FC = () => {
-
     const [selectAll, setSelectAll] = useState<boolean>(false)
     const {setUsers} = useContext(UsersContext)
     const {language} = useContext(AppContext)
-    const {theme} = useTheme()
 
     useEffect(()=>{
         setUsers(prevState=>

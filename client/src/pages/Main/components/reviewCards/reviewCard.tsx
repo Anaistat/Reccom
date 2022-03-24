@@ -1,12 +1,11 @@
-import React, {FC, StyleHTMLAttributes, useContext, useEffect, useState} from 'react';
+import React, {FC} from 'react';
 import "./reviewCard.scss"
 import {Review} from "../../../../types";
 import {Flag} from "../../../../utility";
 import Stars from "../../../../components/stars/stars";
-import {Link, Navigate, useParams} from "react-router-dom";
+import {Link} from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import ReviewService from "../../../../services/ReviewService";
-import AppContext from "../../../../context/app.context";
+
 
 
 type ReviewCardProps = {
@@ -22,7 +21,7 @@ const ReviewCard:FC<ReviewCardProps> = ({review, isLiked}) => {
         <Link to={route} className="card">
             <div className="review-card-container">
                 <div className="card-upper-part"
-                style={{backgroundImage: `linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("http://localhost:8080/images/${review.images[0]} ")`}}>
+                style={{backgroundImage: `linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.5)), url("${review.images[0]}")`}}>
                     <div className="card-type">
                         <div className="card-type-flag" style={{
                             background: Flag[review.product.category].background

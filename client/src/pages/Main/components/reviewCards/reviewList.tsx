@@ -1,17 +1,15 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {FC, useContext, useEffect, useState} from 'react';
 import ReviewService from "../../../../services/ReviewService";
 import {Review} from "../../../../types";
 import ReviewCard from "./reviewCard";
-import {useParams, Navigate} from "react-router-dom";
 import AppContext from "../../../../context/app.context";
 import "./reviewList.scss"
 
 
-const ReviewList = () => {
+const ReviewList: FC<{category: string}> = ({ category }) => {
 
     const [reviews, setReviews] = useState<Review[]>([])
     const [likes, setLikes] = useState<number[]>([])
-    const {category} = useParams()
 
     const {user, search} = useContext(AppContext)
 

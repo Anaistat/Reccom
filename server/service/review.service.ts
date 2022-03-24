@@ -1,4 +1,4 @@
-import db from "../db"
+import db from "../../db"
 import {DBReview, Review} from "../../client/src/types";
 import ProductService from "./product.service";
 import UserService from "./user.service";

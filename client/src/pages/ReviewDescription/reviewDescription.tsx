@@ -4,7 +4,7 @@ import ReviewSlider from "./components/reviewSlider";
 import ReviewTypeFlag from "./components/reviewTypeFlag";
 import {Review} from "../../types";
 import ReviewService from "../../services/ReviewService";
-import {useNavigate, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import Preloader from "../../components/preloader/preloader";
 import Comments from "./components/comment/comments";
 import ReactMarkdown from "react-markdown";

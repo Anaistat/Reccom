@@ -43,11 +43,12 @@ const Header = () => {
                 photo: res.user.photoURL
             }
             const user: User | undefined = await AuthController.authorize(candidate)
-            if (user) {
+            if (user && user.status === 'Active') {
                 setUser(user)
-                navigate('/popular')
+                navigate('/')
             } else {
                 setUser(undefined)
+                logout()
             }
         }
         catch (e) {
@@ -58,15 +59,17 @@ const Header = () => {
     const logout = () =>{
         auth.signOut().then(()=>{
             setUser(undefined)
-            navigate('/popular')
+            navigate('/')
         })
     }
 
     return (
         <header className="header-container">
             <div>
-                <Link to="/popular">
-                    <img src="/logo.png" alt="logo" width="48" height="40" className="logo-name"/>
+                <Link to="/">
+
+                    <img src="/logo.png" alt="logo" width="42" height="40" className="logo-name"/>
+
                     <svg
                         className="logo-icons"
                         width="200px" height="43px">

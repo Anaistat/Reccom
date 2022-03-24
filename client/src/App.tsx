@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import './App.css';
-import {BrowserRouter, Navigate, useNavigate, Route, Routes} from "react-router-dom"
+import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Main from "./pages/Main/Main";
 import Header from "./components/Header/header";
 import UserProfile from "./pages/UserProfile/userProfile";
@@ -56,8 +56,7 @@ function App() {
                         <Header/>
                         <Routes>
                             <Route path='/'>
-                                <Route index element={<Navigate to='/recent'/>}/>
-                                <Route path="/:category" element={<Main/>}/>
+                                <Route index element={<Main/>}/>
                                 <Route path="user/:id" element={
                                     user?<UserProfile/>:<Main/>
                                 }/>

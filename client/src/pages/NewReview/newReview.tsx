@@ -49,7 +49,7 @@ const NewReview:FC = () => {
                 score: score
             })
         }
-        navigate('/popular')
+        navigate('/')
     }
 
     return (

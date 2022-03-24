@@ -151,8 +151,12 @@ class UserController {
             const candidate: Candidate = request.body
 
             const probablyUser = await UserService.getByUid(candidate.uid)
-            if (probablyUser) {
+            if (probablyUser && probablyUser.status !== 'Block') {
+                await UserService.updateLoginDate(probablyUser.id)
                 return response.status(200).json({ data: probablyUser })
+            }
+            if (probablyUser?.status === 'Block') {
+                return next(ApiErrors.PermissionError(['User is blocked.']))
             }
             const user = await UserService.register(candidate)
             if (!user) {

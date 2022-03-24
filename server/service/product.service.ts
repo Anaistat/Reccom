@@ -1,4 +1,4 @@
-import db from "../db";
+import db from "../../db";
 import {Category, DBCategory, DBProduct, Product} from "../../client/src/types";
 import ApiErrors from "../exceptions/api.errors";
 

@@ -4,9 +4,11 @@
     "target": "es5",
     "sourceMap": true,
     "esModuleInterop": true,
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "outDir": "build"
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "client"
   ]
 }

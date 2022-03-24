@@ -1,7 +1,5 @@
-import React, {FC, useEffect} from 'react';
+import React, {FC} from 'react';
 import "./reviewsPanel.scss"
-import {Button} from "react-bootstrap";
-import Stars from "../../../components/stars/stars";
 import {Review} from "../../../types";
 import SingleReview from "./singleReview";
 

@@ -10,5 +10,5 @@ export default (error: Error, request: Request, response: Response, next: NextFu
 	if (error instanceof DatabaseError) {
 		return response.status(500).json({error: error.message})
 	}
-	return response.status(500).json({ error: "Unexpected error" })
+	return response.status(500).json({ error: error })
 }
