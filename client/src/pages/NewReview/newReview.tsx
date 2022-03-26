@@ -45,7 +45,7 @@ const NewReview:FC = () => {
                 author_id: user.id,
                 tags: tags,
                 images: inputImages.current.files,
-                text: text,
+                text: text.replace(/[']/g, "’"),
                 score: score
             })
         }

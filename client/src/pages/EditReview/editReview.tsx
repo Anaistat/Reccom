@@ -41,7 +41,7 @@ const EditReview:FC = () => {
                 product_id: product.id,
                 tags: tags,
                 images: inputImages.current.files,
-                text: text,
+                text: text.replace(/[']/g, "’"),
                 score: score,
                 date
             })
